@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: AzureTestPlan@0
+  inputs:
+    testSelector: 'automatedTests'
+    testPlanOrRunSelector: 'testRun'
+    testRunId: '$(test.RunId)'
+    testConfiguration: '2'
+    testLanguageInput: 'JavaMaven'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
