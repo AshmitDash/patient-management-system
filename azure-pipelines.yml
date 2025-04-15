@@ -14,7 +14,7 @@ steps:
 - task: Maven@4
   inputs:
     azureSubscription: 'ASHDASH_POC(b7f35097-0dd7-4e06-9870-30716c59f6ee)'
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'Patient-Management-System/pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
