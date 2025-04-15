@@ -11,6 +11,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '21'
+    jdkArchitecture: 'x64'
+    jdkSourceOption: 'PreInstalled'
+
+- script: java -version
+  displayName: 'Check Java Version'
 - task: Maven@4
   inputs:
     azureSubscription: 'ASHDASH_POC(b7f35097-0dd7-4e06-9870-30716c59f6ee)'
