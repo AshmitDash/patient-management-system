@@ -14,8 +14,9 @@ steps:
 - task: JavaToolInstaller@0
   inputs:
     versionSpec: '21'
-    jdkArchitecture: 'x64'
+    jdkArchitectureOption: 'x64'   # Specify 64-bit architecture
     jdkSourceOption: 'PreInstalled'
+
 
 - script: java -version
   displayName: 'Check Java Version'
